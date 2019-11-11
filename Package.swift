@@ -18,7 +18,7 @@ let package = Package(
     targets: [
         .target(
             name: "Loaf", 
-            path: "Sources/Loaf"]),
+            path: "Sources/Loaf"),
         .testTarget(
             name: "LoafTests",
             dependencies: ["Loaf"]),
