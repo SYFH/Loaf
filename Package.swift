@@ -5,7 +5,9 @@ import PackageDescription
 let package = Package(
     name: "Loaf",
     platforms: [
-        .iOS(.v9)
+        .iOS(.v9),
+        .macOS(.v10_12),
+        .tvOS(.v10)
     ],
     products: [
         .library(
@@ -13,11 +15,10 @@ let package = Package(
             targets: ["Loaf"]
         ),
     ],
-    dependencies: [],
     targets: [
         .target(
-            name: "Loaf",
-            dependencies: []),
+            name: "Loaf", 
+            path: "Sources/Loaf"]),
         .testTarget(
             name: "LoafTests",
             dependencies: ["Loaf"]),
